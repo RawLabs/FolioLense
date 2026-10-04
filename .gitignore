@@ -1,0 +1,23 @@
+# Local indexes and generated search data
+*.sqlite
+*.sqlite-*
+*.db
+*.db-*
+*.jsonl
+last-folder.txt
+
+# Python environments and caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Local credentials and editor/agent settings
+.env
+.env.*
+.aws/
+.agents/
+.codex/
+.vscode/
+.idea/
