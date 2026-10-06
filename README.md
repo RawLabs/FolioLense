@@ -4,34 +4,10 @@ Find relevant pages in your local PDFs and images by describing what you
 want to find. FolioLense runs in a terminal and saves its progress so you
 can stop and resume. Unchanged documents are skipped on later runs.
 
-The search model is `tomaarsen/Qwen3-VL-Embedding-2B-vdr`.
+## Quick start
 
-## Requirements
-
-- Linux with Bash and Python 3 with `venv` support.
-- An NVIDIA GPU, working NVIDIA driver, and CUDA-capable PyTorch for the installer.
-- Internet access for dependencies and the initial model download.
-- Disk space for the model, environment, and document index.
-
-## Install and launch
-
-Open a terminal in this project folder, then run:
-
-```bash
-./install.sh
-foliolense
-```
-
-The installer stores the application and its virtual environment in
-`~/.local/share/foliolense/` and adds a launcher at `~/.local/bin/foliolense`.
-Ensure `~/.local/bin` is on your PATH, or launch
-`~/.local/share/foliolense/foliolense.sh` directly.
-
-The first indexing or search run downloads the model. The menu supports
-indexing a folder, searching, and viewing index statistics. The index is
-stored at `~/.local/share/foliolense/index.sqlite`.
-
-## Your first search
+After [installation](#installation), run `foliolense` in a terminal.
+The current installer needs Linux and an NVIDIA GPU.
 
 1. Choose **1) Add or update searchable documents**.
 2. Enter a folder or file path, or press Enter to use the suggested folder.
@@ -50,6 +26,35 @@ Choose **3) Show document summary** to see progress and file errors, or
 
 Supported formats: PDF, PNG, JPG/JPEG, WebP, BMP, and TIFF.
 Ctrl+C preserves completed pages so a later crawl can resume.
+
+<a id="install-and-launch"></a>
+
+## Installation
+
+Open a terminal in this project folder, then run:
+
+```bash
+./install.sh
+foliolense
+```
+
+The installer stores the application and its virtual environment in
+`~/.local/share/foliolense/` and adds a launcher at `~/.local/bin/foliolense`.
+Ensure `~/.local/bin` is on your PATH, or launch
+`~/.local/share/foliolense/foliolense.sh` directly.
+
+The first indexing or search run downloads the model. The menu supports
+indexing a folder, searching, and viewing index statistics. The index is
+stored at `~/.local/share/foliolense/index.sqlite`.
+
+## Requirements
+
+- Linux with Bash and Python 3 with `venv` support.
+- An NVIDIA GPU, working NVIDIA driver, and CUDA-capable PyTorch for the installer.
+- Internet access for dependencies and the initial model download.
+- Disk space for the model, environment, and document index.
+
+The search model is `tomaarsen/Qwen3-VL-Embedding-2B-vdr`.
 
 ## Command-line usage
 
